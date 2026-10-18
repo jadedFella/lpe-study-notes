@@ -22,3 +22,8 @@ header_pages:
   - 12-root-pivot.md
   - 13-heap-grooming.md
   - 14-android-hunting.md
+  - 15-signal-uaf.md
+  - 16-mincore-oob.md
+  - 17-futex-hash.md
+  - 18-sched-cache.md
+  - 19-slub-aba.md

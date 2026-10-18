@@ -1,7 +1,8 @@
 # The timer LPE, explained from zero
 
 A slow, chapter-by-chapter walk through `InfinityCore/timer/CVE-2026-98260-ubuntu.c`
-and the kernel machinery it abuses.
+and the kernel machinery it abuses. Part D (chapters 15–19) then practices the
+same method on the other five bugs in the set.
 
 Published for reading at <https://jadedfella.github.io/lpe-study-notes/>
 (source: <https://github.com/jadedFella/lpe-study-notes>).
@@ -26,16 +27,23 @@ or a slab allocator is — those get built up one chapter at a time.
 
 - The exploit: `InfinityCore/timer/CVE-2026-98260-ubuntu.c` (we start reading it
   around chapter 8).
+- The five sibling bugs of Part D: `InfinityCore/{signal,mm,futex,sched,slab}/`
+  — each has a technical README (the chapter's primary source) and a PoC.
 - The kernel source we quote: `kernel-src/pre-fix/` — a copy of the relevant
   files from upstream at commit `d2710c8d938a` (the parent of the fix
-  `acb03d388181`). Line numbers in the book refer to these files.
+  `acb03d388181`, and itself the fix commit for the signal bug of chapter 15).
+  Line numbers in the book refer to these files.
   `kernel-src/pre-fix/README.md` says where each file comes from.
+- The `linux/` checkout is a newer, already-fixed tree; Part D uses it for
+  side-by-side "here is the fix" reading.
 
 ## Reading order
 
 Part A — the pieces (chapters 1–6). Build the mental model.
 Part B — the bug and the exploit (chapters 7–12). Now the PoC makes sense.
 Part C — extra machinery and next steps (chapters 13–14).
+Part D — the other five bugs from the same set (chapters 15–19). Case studies:
+the same method, four new subsystems, four different endgames.
 
 | # | Chapter | Status |
 |---|---------|--------|
@@ -53,6 +61,11 @@ Part C — extra machinery and next steps (chapters 13–14).
 | 12 | From a fake cred to a real root shell | written |
 | 13 | Heap grooming: RCU, SLUB sheaves/barn, PCP, AIO pages | written |
 | 14 | Android porting, and how to hunt bugs like this | written |
+| 15 | The sigqueue UAF: the same exec, a different container (CVE-2026-98256) | written |
+| 16 | mincore and the page-table walker's leaked retry (CVE-2026-89754) | written |
+| 17 | The futex hash UAF, and the pipe flag that rewrites `/usr/bin/passwd` (CVE-2026-80775) | written |
+| 18 | Scheduler cache accounting: a write that outlives its `mm` (CVE-2026-98385) | written |
+| 19 | Racing the allocator itself: SLUB partial-list ABA (CVE-2026-97941) | written |
 
 Suggested pace: two chapters a day. If a chapter feels dense, stop at the
 checkpoint and ask before continuing.
