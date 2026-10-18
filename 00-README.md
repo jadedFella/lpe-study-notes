@@ -47,8 +47,8 @@ Part C — extra machinery and next steps (chapters 13–14).
 | 6 | Life cycles: who frees what, and when (`exit` vs *reap*, `kfree_rcu`) | written |
 | 7 | Assembling the bug: the exact sequence | written |
 | 8 | Reading the trigger in the PoC | written |
-| 9 | The transfer trick: `head == NULL` | coming |
-| 10 | Leaking addresses: `handling` and `elist` | coming |
+| 9 | The transfer trick: a dangling node in a live task | written |
+| 10 | Leaks: the kernel writes our addresses for us | written |
 | 11 | The RB-tree write and the fake cred | coming |
 | 12 | From fake cred to root shell | coming |
 | 13 | Heap grooming: RCU, SLUB sheaves/barn, PCP, AIO pages | coming |

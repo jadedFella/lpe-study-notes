@@ -16,3 +16,5 @@ header_pages:
   - 06-lifetimes.md
   - 07-the-bug.md
   - 08-poc-trigger.md
+  - 09-transfer-trick.md
+  - 10-leaks.md
