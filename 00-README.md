@@ -3,6 +3,8 @@
 A slow, chapter-by-chapter walk through `InfinityCore/timer/CVE-2026-98260-ubuntu.c`
 and the kernel machinery it abuses.
 
+Published for reading at <https://github.com/theSoberSobber/lpe-study-notes>.
+
 ## Who this is for
 
 You can read C and use a Linux shell. You do **not** need any prior kernel
@@ -40,9 +42,9 @@ Part C — extra machinery and next steps (chapters 13–14).
 | 2 | The kernel's view: `task_struct`, `signal_struct`, `struct pid`, `cred` | written |
 | 3 | Timers: what `timer_create` really does, and where a CPU timer lives | written |
 | 4 | The timerqueue: an RB tree with a cached leftmost node | written |
-| 5 | `execve`: the world's most complicated syscall | written |
-| 6 | Life cycles: who frees what, and when (`exit` vs *reap*, `kfree_rcu`) | written |
-| 7 | Assembling the bug: the exact sequence | written |
+| 5 | `execve`: the world's most complicated syscall | coming |
+| 6 | Life cycles: who frees what, and when (`exit` vs *reap*, `kfree_rcu`) | coming |
+| 7 | Assembling the bug: the exact sequence | coming |
 | 8 | Reading the trigger in the PoC | coming |
 | 9 | The transfer trick: `head == NULL` | coming |
 | 10 | Leaking addresses: `handling` and `elist` | coming |

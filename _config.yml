@@ -1,0 +1,14 @@
+title: The timer LPE, from zero
+description: A slow walk through a Linux kernel privilege-escalation bug
+theme: minima
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+header_pages:
+  - 00-README.md
+  - 01-processes-threads-and-syscalls.md
+  - 02-kernel-objects.md
+  - 03-timers.md
+  - 04-timerqueue-rbtree.md
