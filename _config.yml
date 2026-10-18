@@ -12,3 +12,6 @@ header_pages:
   - 02-kernel-objects.md
   - 03-timers.md
   - 04-timerqueue-rbtree.md
+  - 05-execve.md
+  - 06-lifetimes.md
+  - 07-the-bug.md
