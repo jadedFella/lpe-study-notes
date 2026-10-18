@@ -15,3 +15,4 @@ header_pages:
   - 05-execve.md
   - 06-lifetimes.md
   - 07-the-bug.md
+  - 08-poc-trigger.md

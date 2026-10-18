@@ -46,7 +46,7 @@ Part C — extra machinery and next steps (chapters 13–14).
 | 5 | `execve`: the world's most complicated syscall | written |
 | 6 | Life cycles: who frees what, and when (`exit` vs *reap*, `kfree_rcu`) | written |
 | 7 | Assembling the bug: the exact sequence | written |
-| 8 | Reading the trigger in the PoC | coming |
+| 8 | Reading the trigger in the PoC | written |
 | 9 | The transfer trick: `head == NULL` | coming |
 | 10 | Leaking addresses: `handling` and `elist` | coming |
 | 11 | The RB-tree write and the fake cred | coming |
