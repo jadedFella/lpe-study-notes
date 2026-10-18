@@ -1,0 +1,87 @@
+---
+---
+// ---------------------------------------------------------------------------
+// Dark theme for this site.
+//
+// GitHub Pages pins minima 2.5.1, which has no skins. We override its theme
+// variables before the import (minima defines them with `!default`, so our
+// values win), then patch the few colors minima hard-codes (code blocks,
+// syntax highlighting, the header's top border).
+//
+// Palette lives here; change these five colors to retune the whole site.
+// ---------------------------------------------------------------------------
+
+$d-bg:        #0f141a;   // page background
+$d-bg-soft:   #161d26;   // code blocks / fenced code / table headers
+$d-bg-zebra:  #131a23;   // tables: even rows
+$d-border:    #273040;   // borders
+$d-text:      #c9d1d9;   // body text
+$d-muted:     #8b949e;   // secondary text (meta, footer, comments)
+$d-title:     #e6edf3;   // headings and site title
+$d-link:      #6cb6ff;   // links
+
+// minima theme variables (must be set before the import)
+$text-color:       $d-text;
+$background-color: $d-bg;
+$brand-color:      $d-link;
+$grey-color:       $d-muted;
+$grey-color-light: $d-border;   // borders everywhere
+$grey-color-dark:  $d-title;    // titles, header accents, menu icon
+
+@import "minima";
+
+// Let the browser render scrollbars/form controls in dark too.
+:root { color-scheme: dark; }
+
+// minima hard-codes an almost-white 5px top border on the header.
+.site-header { border-top-color: $d-bg-soft; }
+
+// Inline code and fenced code blocks (minima hard-codes #eef).
+pre, code {
+  background-color: $d-bg-soft;
+  border-color: $d-border;
+  color: $d-title;
+}
+
+.highlight { background: $d-bg-soft; }
+.highlighter-rouge .highlight { background: $d-bg-soft; }
+
+// Tables: minima derives the shades from the theme variables, but the result
+// is still too light for a dark page. Pin the important ones.
+table {
+  color: $d-text;
+  border-color: $d-border;
+  tr:nth-child(even) { background-color: $d-bg-zebra; }
+  th, td { border-color: $d-border; }
+  th {
+    background-color: $d-bg-soft;
+    border-color: $d-border;
+    border-bottom-color: $d-border;
+  }
+}
+
+// Syntax highlighting: minima's rouge colors are hard-coded for light
+// backgrounds. GitHub-dark-ish palette.
+.highlight {
+  .c, .cm, .cp, .c1, .cs { color: $d-muted; font-style: italic; }
+  .k, .kc, .kd, .kn, .kp, .kr, .kt, .ow { color: #ff7b72; }
+  .o { color: #ff7b72; font-weight: bold; }
+  .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #a5d6ff; }
+  .m, .mf, .mh, .mi, .mo, .il { color: #79c0ff; }
+  .na, .nb, .bp, .no { color: #79c0ff; }
+  .nc, .nf, .nn { color: #d2a8ff; font-weight: bold; }
+  .nt { color: #7ee787; }
+  .nv, .vc, .vg, .vi { color: #ffa657; }
+  .ne, .gr, .gt { color: #ffa198; font-weight: bold; }
+  .gd { color: #ffa198; background-color: #2d1214; }
+  .gd .x { color: #ffa198; background-color: #3d1a1d; }
+  .gi { color: #aff5b4; background-color: #0f2d17; }
+  .gi .x { color: #aff5b4; background-color: #154321; }
+  .ge { font-style: italic; }
+  .gs { font-weight: bold; }
+  .gh, .gu { color: #79c0ff; }
+  .gp { color: $d-text; }
+  .go { color: $d-muted; }
+  .w { color: #6e7681; }
+  .err { color: #ffa198; background-color: transparent; }
+}
