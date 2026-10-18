@@ -8,6 +8,11 @@ syscalls, `task_struct` / `signal_struct` / `struct pid` / `cred`, POSIX
 timers, the timerqueue RB tree, `execve` and `de_thread`, the use-after-free,
 and then the full exploit chain.
 
+Part D (chapters 15–19) adds five sibling case studies from the same exploit
+set — a sigqueue UAF in `exec()`, a page-table walker OOB in `mincore()`, a
+private futex hash UAF, a scheduler cache accounting UAF, and a SLUB
+partial-list race — with four different exploitation endgames.
+
 **Start here → [00-README.md](00-README.md)**
 
 Reading order and suggested pace are in the index. New chapters are added as
