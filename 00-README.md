@@ -51,8 +51,8 @@ Part C — extra machinery and next steps (chapters 13–14).
 | 10 | Leaks: the kernel writes our addresses for us | written |
 | 11 | Two erases: `rb_erase` writes `task->cred` | written |
 | 12 | From a fake cred to a real root shell | written |
-| 13 | Heap grooming: RCU, SLUB sheaves/barn, PCP, AIO pages | coming |
-| 14 | Android porting, and how to hunt bugs like this | coming |
+| 13 | Heap grooming: RCU, SLUB sheaves/barn, PCP, AIO pages | written |
+| 14 | Android porting, and how to hunt bugs like this | written |
 
 Suggested pace: two chapters a day. If a chapter feels dense, stop at the
 checkpoint and ask before continuing.

@@ -20,3 +20,5 @@ header_pages:
   - 10-leaks.md
   - 11-rb-write.md
   - 12-root-pivot.md
+  - 13-heap-grooming.md
+  - 14-android-hunting.md
