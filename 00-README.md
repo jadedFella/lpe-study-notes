@@ -3,7 +3,8 @@
 A slow, chapter-by-chapter walk through `InfinityCore/timer/CVE-2026-98260-ubuntu.c`
 and the kernel machinery it abuses.
 
-Published for reading at <https://github.com/theSoberSobber/lpe-study-notes>.
+Published for reading at <https://jadedfella.github.io/lpe-study-notes/>
+(source: <https://github.com/jadedFella/lpe-study-notes>).
 
 ## Who this is for
 
