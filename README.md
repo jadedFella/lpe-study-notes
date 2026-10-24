@@ -13,6 +13,10 @@ set — a sigqueue UAF in `exec()`, a page-table walker OOB in `mincore()`, a
 private futex hash UAF, a scheduler cache accounting UAF, and a SLUB
 partial-list race — with four different exploitation endgames.
 
+Chapter 20 is an appendix on a different bug class: CVE-2026-43284
+("DirtyFrag"), a networking page-cache write, and the Android chain that turns
+it into an ephemeral root without unlocking the bootloader.
+
 **Start here → [00-README.md](00-README.md)**
 
 Reading order and suggested pace are in the index. New chapters are added as

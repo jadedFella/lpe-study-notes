@@ -45,6 +45,9 @@ Part C — extra machinery and next steps (chapters 13–14).
 Part D — the other five bugs from the same set (chapters 15–19). Case studies:
 the same method, four new subsystems, four different endgames.
 
+Part E — a different bug class (chapter 20). A networking page-cache write
+(CVE-2026-43284) and the Android chain that turns it into an ephemeral root.
+
 | # | Chapter | Status |
 |---|---------|--------|
 | 1 | Processes, threads, syscalls, PIDs — the userspace view | written |
@@ -66,6 +69,7 @@ the same method, four new subsystems, four different endgames.
 | 17 | The futex hash UAF, and the pipe flag that rewrites `/usr/bin/passwd` (CVE-2026-80775) | written |
 | 18 | Scheduler cache accounting: a write that outlives its `mm` (CVE-2026-98385) | written |
 | 19 | Racing the allocator itself: SLUB partial-list ABA (CVE-2026-97941) | written |
+| 20 | DirtyFrag: a page-cache write through ESP, and an Android root chain (CVE-2026-43284) | written |
 
 Suggested pace: two chapters a day. If a chapter feels dense, stop at the
 checkpoint and ask before continuing.
